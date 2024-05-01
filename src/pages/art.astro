@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import logo from "../../public/logo.svg";
+import artButton from "../../public/art-button.svg";
+---
+
+<Layout title="homepage">
+  <div class="flex items-center justify-center my-32 w-full">
+    <img class="w-80" src={logo.src} />
+  </div>
+  <div class="flex items-center justify-center w-full">
+    <div class="grid grid-cols-1 gap-10">
+      <a href="/" class="flex items-center justify-center">
+        <h1 class="text-4xl">🔙</h1>
+      </a>
+    </div>
+  </div>
+</Layout>
