@@ -2,8 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 
 import logo from "../../public/logo.svg";
-import artButton from "../../public/art-button.svg";
-import poetryButton from "../../public/poetry-button.svg";
 ---
 
 <Layout title="homepage">
@@ -11,12 +9,9 @@ import poetryButton from "../../public/poetry-button.svg";
     <img class="w-80" src={logo.src} />
   </div>
   <div class="flex items-center justify-center w-full">
-    <div class="grid grid-cols-2 gap-10">
-      <a href="/babelog/art">
-        <img class="w-60" src={artButton.src} />
-      </a>
-      <a href="/babelog/poetry">
-        <img class="w-60" src={poetryButton.src} />
+    <div class="grid grid-cols-1 gap-10">
+      <a href="/babelog/" class="flex items-center justify-center">
+        <h1 class="text-4xl">🔙</h1>
       </a>
     </div>
   </div>

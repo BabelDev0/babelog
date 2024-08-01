@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+export interface Props {
+  path: string;
+  url: string;
+}
+
+const { path, url } = Astro.props;
+---
+
+<Layout title="preview">
+  <div class="border-4 border-black">
+    <img class="h-fit w-96" src={path} />
+  </div>
+</Layout>

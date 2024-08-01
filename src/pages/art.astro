@@ -2,18 +2,34 @@
 import Layout from "../layouts/Layout.astro";
 
 import logo from "../../public/logo.svg";
-import artButton from "../../public/art-button.svg";
+import Preview from "../components/Preview.astro";
+
+import TISECAT from "../../public/art/TISECAT.svg";
+import NEWTREE from "../../public/art/NEWTREE.svg";
+import light from "../../public/art/light.svg";
+import Euler from "../../public/art/Euler.svg";
+import Godel from "../../public/art/Godel.svg";
+import DALWAVE from "../../public/art/DALWAVE.svg";
+import GHOSSIAN from "../../public/art/GHOSSIAN.svg";
 ---
 
 <Layout title="homepage">
   <div class="flex items-center justify-center my-32 w-full">
     <img class="w-80" src={logo.src} />
   </div>
-  <div class="flex items-center justify-center w-full">
-    <div class="grid grid-cols-1 gap-10">
-      <a href="/babelog/" class="flex items-center justify-center">
-        <h1 class="text-4xl">🔙</h1>
-      </a>
+  <div class="flex items-center justify-center m-10">
+    <div class="grid grid-cols-3 gap-10">
+      <Preview path={TISECAT.src} url="/babelog/public/art/TISECAT.svg" />
+      <Preview path={NEWTREE.src} url="/babelog/public/art/NEWTREE.svg" />
+      <Preview path={light.src} url="/babelog/public/art/light.svg" />
+      <Preview path={Euler.src} url="/babelog/public/art/Euler.svg" />
+      <Preview path={Godel.src} url="/babelog/public/art/Godel.svg" />
+      <Preview path={DALWAVE.src} url="/babelog/public/art/DALWAVE.svg" />
+      <Preview path={GHOSSIAN.src} url="/babelog/public/art/GHOSSIAN.svg" />
     </div>
   </div>
+  <div class="flex items-center justify-center w-full"></div>
+  <a href="/babelog/" class="flex items-center justify-center">
+    <h1 class="text-4xl">🔙</h1>
+  </a>
 </Layout>
