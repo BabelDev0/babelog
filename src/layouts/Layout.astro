@@ -6,7 +6,7 @@ interface Props {
   backUrl?: string;
 }
 
-const { title, backUrl = "/" } = Astro.props;
+const { title, backUrl = "/babelog" } = Astro.props;
 ---
 
 <!doctype html>
@@ -26,7 +26,7 @@ const { title, backUrl = "/" } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <a href="/">
+    <a href="/babelog">
       <div class="flex items-center justify-center mt-32 w-full">
         <img class="w-80" src={titleIcon.src} />
       </div>

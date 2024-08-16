@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://BabelDev0.github.io',
-  base: '/',
+  base: '/babelog',
 });

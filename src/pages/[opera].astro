@@ -13,7 +13,7 @@ const { opera } = Astro.params;
 const currentOpera = operas.find((o) => o.title === opera);
 ---
 
-<Layout title={currentOpera?.title ?? "opera"} backUrl="/art">
+<Layout title={currentOpera?.title ?? "opera"} backUrl="/babelog/art">
   <div class="flex flex-col items-center justify-center w-full mt-36">
     <div class="border-4 border-black">
       <img class="h-svh" src={currentOpera?.src} alt={currentOpera?.title} />
