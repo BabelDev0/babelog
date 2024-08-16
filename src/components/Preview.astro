@@ -2,18 +2,22 @@
 export interface Props {
   path: string;
   lazyLoad: boolean;
+  title: string;
 }
 
-const { path, lazyLoad } = Astro.props;
+const { path, lazyLoad, title } = Astro.props;
 ---
 
-<div class="border-4 border-black">
-  <a href={path}>
-    <img
-      class="h-fit w-96"
-      src={path}
-      loading={lazyLoad ? "lazy" : "eager"}
-      alt="preview drawing"
-    />
-  </a>
+<div class="flex flex-col justify-center items-center">
+  <div class="border-4 border-black">
+    <a href={`/${title}`}>
+      <img
+        class="w-96 h-fit"
+        src={path}
+        loading={lazyLoad ? "lazy" : "eager"}
+        alt="preview drawing"
+      />
+    </a>
+  </div>
+  <h1 class="text-2xl font-flower font-bold mt-3">{title}</h1>
 </div>

@@ -1,20 +1,62 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const { opera } = Astro.params;
+import operas from "../data/operasData.ts";
 
 export async function getStaticPaths() {
-  return [
-    { params: { opera: "@operas/TISECAT.webp" } },
-    { params: { opera: "@operas/NEWTREE.webp" } },
-    { params: { opera: "@operas/light.webp" } },
-    { params: { opera: "@operas/Euler.webp" } },
-    { params: { opera: "@operas/Godel.webp" } },
-    { params: { opera: "@operas/DALWAVE.webp" } },
-    { params: { opera: "@operas/GHOSSIAN.webp" } },
-  ];
+  // Generate paths based on the operas array
+  return operas.map((opera) => ({
+    params: { opera: opera.title },
+  }));
 }
+
+const { opera } = Astro.params;
+const currentOpera = operas.find((o) => o.title === opera);
 ---
 
-<Layout title="Opera">
-  <p>{opera}</p>
+<Layout title={currentOpera?.title ?? "opera"} backUrl="/art">
+  <div class="flex flex-col items-center justify-center w-full mt-36">
+    <div class="border-4 border-black">
+      <img class="h-svh" src={currentOpera?.src} alt={currentOpera?.title} />
+    </div>
+    <h1 class="text-4xl font-flower font-bold mt-10">{currentOpera?.title}</h1>
+    <div class="flex flex-col items-center justify-center w-1/2 my-10">
+      <!-- <p class="text-lg font-flower">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit
+        amet enim libero. Maecenas sit amet hendrerit massa. Vestibulum sagittis
+        magna eu commodo interdum. Ut ullamcorper dui mattis nisi vehicula
+        sollicitudin eget sed quam. Donec eget aliquam magna, eget congue erat.
+        Fusce ornare iaculis tempor. Nunc dictum justo a justo rhoncus
+        venenatis. Nam vehicula erat ornare nisi blandit pretium. Pellentesque
+        accumsan quam posuere, ultricies est tincidunt, mattis est. Donec
+        blandit interdum enim vitae condimentum. Sed quam magna, lobortis
+        suscipit dictum eu, ornare et libero. Cras varius scelerisque finibus.
+        Curabitur egestas ante nec pulvinar placerat. Nullam congue turpis
+        laoreet consectetur hendrerit. Aliquam maximus lectus quis mauris
+        dignissim dictum. Etiam eget neque nunc. Aenean rutrum sit amet nunc non
+        molestie. Phasellus posuere sodales nisi id aliquet. Duis convallis nunc
+        lacus, eu congue enim fringilla id. Praesent rhoncus massa in odio
+        fermentum accumsan. Vestibulum ante ipsum primis in faucibus orci luctus
+        et ultrices posuere cubilia curae; Vivamus ac congue justo. Maecenas
+        lorem nisi, vestibulum eget sodales in, porttitor ac eros. Quisque
+        mollis, arcu vel vehicula posuere, nisl ante fermentum nunc, eget dictum
+        mauris nibh eu ante. Ut mi ante, convallis a luctus in, accumsan non
+        tellus. Sed eleifend diam venenatis magna pharetra, at mollis ipsum
+        dapibus. Proin non enim sed urna ullamcorper ultrices eget vitae lectus.
+        Morbi at gravida diam, vitae bibendum metus. Nam porttitor justo ut nisi
+        elementum lobortis. Fusce condimentum turpis id leo placerat porta. Sed
+        posuere lectus mi, ac pharetra metus ullamcorper at. Nullam in efficitur
+        sem. Nam fringilla sapien in aliquet mollis. Sed ac euismod mauris.
+        Suspendisse quis metus elit. Praesent tristique ut lacus in aliquam. Sed
+        a scelerisque turpis. Phasellus facilisis maximus feugiat. Phasellus
+        posuere nec velit in venenatis. Suspendisse potenti. Duis tristique
+        porta pretium. Suspendisse et metus lectus. Nam lectus nulla, molestie
+        at facilisis eget, facilisis quis urna. Sed congue elit non nulla semper
+        vulputate. Morbi non mi non justo porttitor sagittis. Donec vehicula
+        vitae orci sit amet dapibus. Vestibulum tellus felis, auctor quis
+        maximus nec, lobortis vitae libero. Sed euismod nisl nec porttitor
+        commodo. Vestibulum finibus eros eu mi dapibus, nec congue arcu
+        ullamcorper. Ut iaculis eu nisi non consequat. Vivamus eget felis dolor.
+      </p> -->
+    </div>
+  </div>
 </Layout>

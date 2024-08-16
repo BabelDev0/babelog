@@ -1,0 +1,13 @@
+---
+interface Props {
+  path: ImageMetadata;
+  url: string;
+  classes: string;
+}
+
+const { path, url, classes } = Astro.props;
+---
+
+<a href={url}>
+  <img class={classes} src={path.src} />
+</a>

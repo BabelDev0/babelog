@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@operas/*": ["public/art/*"]
+      "@operas/*": ["public/art/*"],
+      "@icons/*": ["src/icons/*"]
     }
   }
 }

@@ -1,32 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-import logo from "../../public/logo.svg";
+import Operas from "../data/operasData.ts";
 import Preview from "../components/Preview.astro";
-
-import TISECAT from "@operas/TISECAT.webp";
-import NEWTREE from "@operas/NEWTREE.webp";
-import light from "@operas/light.webp";
-import Euler from "@operas/Euler.webp";
-import Godel from "@operas/Godel.webp";
-import DALWAVE from "@operas/DALWAVE.webp";
-import GHOSSIAN from "@operas/GHOSSIAN.webp";
 ---
 
 <Layout title="artpage">
-  <div class="flex items-center justify-center m-10">
+  <div class="flex items-center justify-center m-10 mt-36">
     <div class="grid lg:grid-cols-3 gap-10">
-      <Preview path={TISECAT.src} lazyLoad={false} />
-      <Preview path={NEWTREE.src} lazyLoad={false} />
-      <Preview path={light.src} lazyLoad={false} />
-      <Preview path={Euler.src} lazyLoad={true} />
-      <Preview path={Godel.src} lazyLoad={true} />
-      <Preview path={DALWAVE.src} lazyLoad={true} />
-      <Preview path={GHOSSIAN.src} lazyLoad={true} />
+      {
+        Operas.map((opera) => (
+          <Preview path={opera.src} lazyLoad={true} title={opera.title} />
+        ))
+      }
     </div>
   </div>
   <div class="flex items-center justify-center w-full"></div>
-  <a href="/babelog/" class="flex items-center justify-center">
-    <h1 class="text-4xl">🔙</h1>
-  </a>
 </Layout>
