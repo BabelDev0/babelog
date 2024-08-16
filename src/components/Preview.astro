@@ -1,15 +1,19 @@
 ---
-import Layout from "../layouts/Layout.astro";
-
 export interface Props {
   path: string;
+  lazyLoad: boolean;
 }
 
-const { path } = Astro.props;
+const { path, lazyLoad } = Astro.props;
 ---
 
-<Layout title="preview">
-  <div class="border-4 border-black">
-    <img class="h-fit w-96" src={path} />
-  </div>
-</Layout>
+<div class="border-4 border-black">
+  <a href={path}>
+    <img
+      class="h-fit w-96"
+      src={path}
+      loading={lazyLoad ? "lazy" : "eager"}
+      alt="preview drawing"
+    />
+  </a>
+</div>

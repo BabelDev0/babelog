@@ -4,28 +4,25 @@ import Layout from "../layouts/Layout.astro";
 import logo from "../../public/logo.svg";
 import Preview from "../components/Preview.astro";
 
-import TISECAT from "../../public/art/TISECAT.png";
-import NEWTREE from "../../public/art/NEWTREE.png";
-import light from "../../public/art/light.png";
-import Euler from "../../public/art/Euler.png";
-import Godel from "../../public/art/Godel.png";
-import DALWAVE from "../../public/art/DALWAVE.png";
-import GHOSSIAN from "../../public/art/GHOSSIAN.png";
+import TISECAT from "@operas/TISECAT.webp";
+import NEWTREE from "@operas/NEWTREE.webp";
+import light from "@operas/light.webp";
+import Euler from "@operas/Euler.webp";
+import Godel from "@operas/Godel.webp";
+import DALWAVE from "@operas/DALWAVE.webp";
+import GHOSSIAN from "@operas/GHOSSIAN.webp";
 ---
 
-<Layout title="homepage">
-  <div class="flex items-center justify-center my-32 w-full">
-    <img class="w-80" src={logo.src} />
-  </div>
+<Layout title="artpage">
   <div class="flex items-center justify-center m-10">
     <div class="grid lg:grid-cols-3 gap-10">
-      <Preview path={TISECAT.src} />
-      <Preview path={NEWTREE.src} />
-      <Preview path={light.src} />
-      <Preview path={Euler.src} />
-      <Preview path={Godel.src} />
-      <Preview path={DALWAVE.src} />
-      <Preview path={GHOSSIAN.src} />
+      <Preview path={TISECAT.src} lazyLoad={false} />
+      <Preview path={NEWTREE.src} lazyLoad={false} />
+      <Preview path={light.src} lazyLoad={false} />
+      <Preview path={Euler.src} lazyLoad={true} />
+      <Preview path={Godel.src} lazyLoad={true} />
+      <Preview path={DALWAVE.src} lazyLoad={true} />
+      <Preview path={GHOSSIAN.src} lazyLoad={true} />
     </div>
   </div>
   <div class="flex items-center justify-center w-full"></div>

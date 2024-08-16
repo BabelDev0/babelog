@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+const { opera } = Astro.params;
+
+export async function getStaticPaths() {
+  return [
+    { params: { opera: "@operas/TISECAT.webp" } },
+    { params: { opera: "@operas/NEWTREE.webp" } },
+    { params: { opera: "@operas/light.webp" } },
+    { params: { opera: "@operas/Euler.webp" } },
+    { params: { opera: "@operas/Godel.webp" } },
+    { params: { opera: "@operas/DALWAVE.webp" } },
+    { params: { opera: "@operas/GHOSSIAN.webp" } },
+  ];
+}
+---
+
+<Layout title="Opera">
+  <p>{opera}</p>
+</Layout>
