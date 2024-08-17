@@ -1,11 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-import logo from "../../public/logo.svg";
+import poems from "../data/poemsData";
 ---
 
 <Layout title="poetry">
   <div class="flex items-center justify-center w-full mt-36">
-    <div class="grid grid-cols-1 gap-10"></div>
+    <div class="grid grid-cols-1 gap-10">
+      {
+        poems.map((poem) => (
+          <div>
+            <a href={poem.path} class="text-2xl font-flower">
+              {poem.title}
+            </a>
+          </div>
+        ))
+      }
+    </div>
   </div>
 </Layout>

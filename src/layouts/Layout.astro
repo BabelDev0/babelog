@@ -22,6 +22,10 @@ const { title, backUrl = "/babelog" } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Gloria+Hallelujah&family=Indie+Flower&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -34,7 +38,7 @@ const { title, backUrl = "/babelog" } = Astro.props;
     <slot />
     {
       title != "homepage" && (
-        <a href={backUrl} class="flex items-center justify-center">
+        <a href={backUrl} class="flex items-center justify-center mt-16">
           <h1 class="text-4xl">🔙</h1>
         </a>
       )
