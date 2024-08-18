@@ -13,18 +13,18 @@ const { title, backUrl = "/babelog" } = Astro.props;
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script
-      type="text/partytown"
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-XMGE04D2PF"></script>
-    <script type="text/partytown">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XMGE04D2PF"
+    ></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-XMGE04D2PF", { anonymize_ip: true });
+
+      gtag("config", "G-XMGE04D2PF");
     </script>
+
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
