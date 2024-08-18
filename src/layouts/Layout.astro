@@ -28,7 +28,7 @@ const { title, backUrl = "/babelog" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/babelog/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -42,20 +42,39 @@ const { title, backUrl = "/babelog" } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <a href="/babelog">
-      <div class="flex items-center justify-center mt-32 w-full">
-        <img class="w-80" src={titleIcon.src} />
-      </div>
-    </a>
-    <slot />
+  <body class="flex flex-col min-h-screen">
+    <main class="flex-grow">
+      <a href="/babelog">
+        <div class="flex items-center justify-center mt-32 w-full">
+          <img class="w-80" src={titleIcon.src} />
+        </div>
+      </a>
+      <slot />
+      {
+        title != "homepage" && (
+          <a href={backUrl} class="flex items-center justify-center mt-16">
+            <h1 class="text-4xl">🔙</h1>
+          </a>
+        )
+      }
+    </main>
+    <!-- Footer section -->
     {
-      title != "homepage" && (
-        <a href={backUrl} class="flex items-center justify-center mt-16">
-          <h1 class="text-4xl">🔙</h1>
-        </a>
+      title != "privacy-policy" && (
+        <footer class="text-sm mx-10 mt-20 mb-3">
+          <div class="flex justify-center items-center">
+            <p class="mr-1">
+              We use analytics to gather data about how our website is used.
+              <a class="text-blue-400 font-bold" href="/babelog/privacy-policy">
+                Privacy Policy
+              </a>
+              .
+            </p>
+          </div>
+        </footer>
       )
     }
   </body>
+
+  <style is:global></style>
 </html>
-<style is:global></style>
