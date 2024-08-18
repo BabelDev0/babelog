@@ -15,7 +15,7 @@ const currentOpera = operas.find((o) => o.title === opera);
 
 <Layout title={currentOpera?.title ?? "opera"} backUrl="/babelog/art">
   <div class="flex flex-col items-center justify-center w-full mt-36">
-    <div class="border-4 border-black">
+    <div class="border-4 border-black mx-1">
       <img
         class="sm:w-svh md:h-svh lg:h-svh"
         src={currentOpera?.src}
