@@ -23,8 +23,7 @@ const { title, backUrl = "/babelog" } = Astro.props;
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
-      gtag("config", "G-XMGE04D2PF");
+      gtag("config", "G-XMGE04D2PF", { anonymize_ip: true });
     </script>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
