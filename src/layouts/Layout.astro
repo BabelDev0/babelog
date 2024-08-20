@@ -4,9 +4,10 @@ import titleIcon from "@icons/title.svg";
 interface Props {
   title: string;
   backUrl?: string;
+  footer?: boolean;
 }
 
-const { title, backUrl = "/babelog" } = Astro.props;
+const { title, backUrl = "/babelog", footer = true } = Astro.props;
 ---
 
 <!doctype html>
@@ -62,7 +63,7 @@ const { title, backUrl = "/babelog" } = Astro.props;
       </a>
       <slot />
       {
-        title != "homepage" && (
+        backUrl && (
           <a href={backUrl} class="flex items-center justify-center mt-16">
             <h1 class="text-4xl">🔙</h1>
           </a>
@@ -71,7 +72,7 @@ const { title, backUrl = "/babelog" } = Astro.props;
     </main>
     <!-- Footer section -->
     {
-      title != "privacy-policy" && (
+      footer && (
         <footer class="text-sm mx-10 mt-20 mb-3">
           <div class="flex justify-center items-center">
             <p class="mr-1">
