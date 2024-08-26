@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import days from "../data/daysData";
+
+const path = "/babelog/days/";
+
+const lastDay = days[days.length - 1];
+---
+
+<Layout title="days">
+  <div class="flex flex-col items-center justify-center w-full mt-32">
+    <a href={path + lastDay} class="text-5xl font-flower mb-20">
+      <div class="border-black border-4 p-10">{lastDay}</div>
+    </a>
+    <div
+      class="grid grid-cols-2 gap-y-2 gap-2 text-xl lg:text-4xl lg:grid-cols-5 lg:gap-10"
+    >
+      {
+        days.map((day) => (
+          <a href={path + day} class=" font-flower">
+            <div class="border-black border-2 p-10">{day}</div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

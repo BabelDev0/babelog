@@ -1,28 +1,33 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import operas from "../../data/operasData.ts";
+import paintings from "../../data/paintingsData";
 
 export async function getStaticPaths() {
-  // Generate paths based on the operas array
-  return operas.map((opera) => ({
-    params: { opera: opera.title },
+  // Generate paths based on the paintings array
+  return paintings.map((painting) => ({
+    params: { painting: painting.title },
   }));
 }
 
-const { opera } = Astro.params;
-const currentOpera = operas.find((o) => o.title === opera);
+const { painting } = Astro.params;
+const currentpainting = paintings.find((o) => o.title === painting);
 ---
 
-<Layout title={currentOpera?.title ?? "opera"} backUrl="/babelog/art">
+<Layout
+  title={currentpainting?.title ?? "painting"}
+  backUrl="/babelog/paintings"
+>
   <div class="flex flex-col items-center justify-center w-full mt-36">
     <div class="border-4 border-black mx-1">
       <img
         class="sm:w-svh md:h-svh lg:h-svh"
-        src={currentOpera?.src}
-        alt={currentOpera?.title}
+        src={currentpainting?.src}
+        alt={currentpainting?.title}
       />
     </div>
-    <h1 class="text-4xl font-flower font-bold mt-10">{currentOpera?.title}</h1>
+    <h1 class="text-4xl font-flower font-bold mt-10">
+      {currentpainting?.title}
+    </h1>
     <div class="flex flex-col items-center justify-center w-1/2 my-10">
       <!-- <p class="text-lg font-flower">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit

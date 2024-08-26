@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Operas from "../data/operasData.ts";
+import paintings from "../data/paintingsData.ts";
 import Preview from "../components/Preview.astro";
 ---
 
@@ -8,8 +8,8 @@ import Preview from "../components/Preview.astro";
   <div class="flex items-center justify-center m-10 mt-36">
     <div class="grid lg:grid-cols-3 gap-10">
       {
-        Operas.map((opera) => (
-          <Preview path={opera.src} lazyLoad={true} title={opera.title} />
+        paintings.map((painting) => (
+          <Preview path={painting.src} lazyLoad={true} title={painting.title} />
         ))
       }
     </div>
