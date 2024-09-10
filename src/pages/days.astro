@@ -9,11 +9,34 @@ const lastDay = days[days.length - 1];
 
 <Layout title="days">
   <div class="flex flex-col items-center justify-center w-full mt-32">
-    <a href={path + lastDay} class="text-5xl font-flower mb-20">
+    <div>
+      <p class="text-2xl font-flower text-justify mx-4 lg:mx-28">
+        This began as a 30-day consistency experiment, where I chose a phrase
+        each day to reflect on and build my thoughts around. Some of the phrases
+        include the word 'God,' as I found passages from the Bible or other
+        sacred texts to be helpful during this process. However, I replaced the
+        word 'God' with attributes like 'Love,' 'Belief,' etc., depending on the
+        context of the phrase. The reason is that I haven’t yet formed a stable
+        concept of God within myself. I’m certain it differs from the portrayal
+        in the Old Testament, and less so from that in the Gospels, but I’m
+        still unsure. Therefore, I preferred to leave the term out for now.
+      </p>
+    </div>
+
+    <a href={path + lastDay} class="text-5xl font-flower my-12">
       <div class="border-black border-4 p-10">{lastDay}</div>
     </a>
+
     <div
-      class="grid grid-cols-2 gap-y-2 gap-2 text-xl lg:text-4xl lg:grid-cols-5 lg:gap-10"
+      class="grid
+        grid-cols-2
+        gap-y-2
+        gap-2
+        text-xl
+        lg:text-4xl
+        lg:grid-cols-5
+        lg:gap-10
+        lg:mx-4"
     >
       {
         days.map((day) => (
