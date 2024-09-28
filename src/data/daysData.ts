@@ -1,4 +1,4 @@
-const today = new Date();
+const today = new Date('2024-09-17');
 const startDate = new Date('2024-08-19');
 
 const formatDate = (date: Date) => {
@@ -6,13 +6,6 @@ const formatDate = (date: Date) => {
     const mm = String(date.getMonth() + 1).padStart(2, '0');
     const yy = String(date.getFullYear()).slice(2);
     return dd + '-' + mm + '-' + yy;
-};
-
-// make a function to check if the date is present in the folder ../pages/days
-// in the forlder there are markdown files with the name of the date in the format dd-mm-yy.md
-// return a boolean if the file is present
-const checkIfFileExists = (date: string) => {
-
 };
 
 // put an element in the array for each day from the start date to today
