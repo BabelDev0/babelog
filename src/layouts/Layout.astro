@@ -1,5 +1,6 @@
 ---
 import titleIcon from "@icons/title.svg";
+import { SimpleAnalytics } from "astro-simpleanalytics-plugin";
 
 interface Props {
   title: string;
@@ -62,19 +63,7 @@ const { title, backUrl = "/babelog", footer = true } = Astro.props;
         </footer>
       )
     }
-    <!-- 100% privacy-first analytics -->
-    <script
-      data-collect-dnt="true"
-      async
-      defer
-      src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-    <noscript
-      ><img
-        src="https://queue.simpleanalyticscdn.com/hello.gif"
-        alt=""
-        referrerpolicy="no-referrer-when-downgrade"
-      /></noscript
-    >
+    <SimpleAnalytics />
   </body>
 
   <style is:global></style>
