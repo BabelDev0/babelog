@@ -1,10 +1,15 @@
 import TISECAT from "@paintings/TISECAT.webp";
 import NEWTREE from "@paintings/NEWTREE.webp";
-import light from "@paintings/light.webp";
+import light_v1 from "@paintings/Light_v1.webp";
+import light_v2 from "@paintings/Light_v2.webp";
 import Euler from "@paintings/Euler.webp";
 import Godel from "@paintings/Godel.webp";
 import DALWAVE from "@paintings/DALWAVE.webp";
 import GHOSSIAN from "@paintings/GHOSSIAN.webp";
+import Ivoryball from "@paintings/Ivoryball.webp";
+import Wind from "@paintings/Wind.webp";
+import Quaring from "@paintings/Quaring.webp";
+import Projections from "@paintings/Projections.webp";
 
 const paintings = [
   {
@@ -16,8 +21,8 @@ const paintings = [
     title: "NEWTREE",
   },
   {
-    src: light.src,
-    title: "light",
+    src: light_v1.src,
+    title: "Light V1",
   },
   {
     src: Euler.src,
@@ -35,6 +40,27 @@ const paintings = [
     src: GHOSSIAN.src,
     title: "GHOSSIAN",
   },
+  {
+    src: light_v2.src,
+    title: "Light V2",
+  },
+  {
+    src: Ivoryball.src,
+    title: "Ivoryball",
+  },
+  {
+    src: Wind.src,
+    title: "Wind",
+  },
+  {
+    src: Quaring.src,
+    title: "Quaring",
+  },
+  {
+    src: Projections.src,
+    title: "Projections",
+  },
 ];
 
 export default paintings;
+

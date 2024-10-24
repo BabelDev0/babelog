@@ -17,5 +17,8 @@
     "astro-simpleanalytics-plugin": "^0.3.17",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.9"
   }
 }
