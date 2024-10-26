@@ -8,7 +8,7 @@ import DALWAVE from "@paintings/DALWAVE.webp";
 import GHOSSIAN from "@paintings/GHOSSIAN.webp";
 import Ivoryball from "@paintings/Ivoryball.webp";
 import Wind from "@paintings/Wind.webp";
-import Quaring from "@paintings/Quaring.webp";
+import Quiraing from "@paintings/Quiraing.webp";
 import Projections from "@paintings/Projections.webp";
 
 const paintings = [
@@ -53,8 +53,8 @@ const paintings = [
     title: "Wind",
   },
   {
-    src: Quaring.src,
-    title: "Quaring",
+    src: Quiraing.src,
+    title: "Quiraing",
   },
   {
     src: Projections.src,
