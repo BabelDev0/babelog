@@ -19,6 +19,10 @@ const poems = [
         title: "Fiducia nelle labbra",
         path: "/babelog/poems/fiducia-nelle-labbra",
     },
+    {
+        title: "London",
+        path: "/babelog/poems/london",
+    },
 ]
 
 export default poems;
