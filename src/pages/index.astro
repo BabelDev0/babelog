@@ -1,17 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import HomeButton from "../components/HomeButton.astro";
-import art from "@icons/buttons/art.svg";
-import poetry from "@icons/buttons/poetry.svg";
-import days from "@icons/buttons/days.svg";
 ---
 
 <Layout title="homepage" backUrl="">
   <div class="flex items-center justify-center w-full mt-20">
     <div class="grid gap-y-3 lg:grid-cols-2 lg:gap-10">
-      <HomeButton path={art} url="/babelog/paintings" classes="w-60" />
-      <HomeButton path={poetry} url="/babelog/poems" classes="w-60" />
-      <HomeButton path={days} url="/babelog/days" classes="w-60" />
+      <HomeButton label="Paintings" url="/babelog/paintings" />
+      <HomeButton label="Poems" url="/babelog/poems" />
     </div>
   </div>
 </Layout>

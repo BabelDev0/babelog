@@ -9,7 +9,7 @@ const { path, lazyLoad, title } = Astro.props;
 ---
 
 <div class="flex flex-col justify-center items-center">
-  <div class="border-4 border-black">
+  <div class="border-4 border-black hover:scale-105 transition duration-300">
     <a href={`/babelog/paintings/${title}`}>
       <img
         class="w-96 h-fit"

@@ -5,11 +5,14 @@ import poems from "../data/poemsData";
 
 <Layout title="poetry">
   <div class="flex items-center justify-center w-full mt-36">
-    <div class="grid grid-cols-1 gap-10">
+    <div class="grid grid-cols-2 gap-10">
       {
         poems.map((poem) => (
           <div>
-            <a href={poem.path} class="text-3xl font-flower">
+            <a
+              href={poem.path}
+              class="text-3xl font-flower border-4 border-black p-10 flex items-center justify-center hover:scale-105 transition duration-300"
+            >
               {poem.title}
             </a>
           </div>
