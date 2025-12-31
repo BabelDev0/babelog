@@ -27,6 +27,10 @@ const poems = [
         title: "Mare di notte",
         path: "/babelog/poems/mare-di-notte",
     },
+    {
+        title: "Silo",
+        path: "/babelog/poems/silo",
+    },
 ]
 
 export default poems;

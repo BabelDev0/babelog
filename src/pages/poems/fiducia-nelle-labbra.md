@@ -10,7 +10,7 @@ e tu li cerchi
 muovendo le labbra
 
 Poi ti immagini 
-seduta al posto degli dei
+seduta al posto degli dèi
 e non sai dire dove sia l’offesa
 
 se nell’accettare
@@ -18,10 +18,10 @@ l’inadeguatezza
 che mai ti perdonerai
 
 o nel bramare
-l’ omologazione
+l’omologazione
 per vivere infinite
 attese di momenti
-che senti non ti apparterrano mai
+che senti non ti apparterranno mai
 
 Per ognuno
 di questi momenti

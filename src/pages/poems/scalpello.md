@@ -5,7 +5,7 @@ layout: ../../layouts/Poem.astro
 
 Questa volta celeste
 Nunzia di sentieri appare
-ma anche tela, ove disegnare
+Ma anche tela, ove disegnare
 Cos'è la mente, scalpello o pennello?
 IL SECONDO! diran loro
 E mentre scrivo con imperlate membra
