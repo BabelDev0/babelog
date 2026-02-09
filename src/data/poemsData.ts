@@ -31,6 +31,10 @@ const poems = [
         title: "Silo",
         path: "/babelog/poems/silo",
     },
+        {
+        title: "Fear in the wind",
+        path: "/babelog/poems/fear-in-the-wind",
+    },
 ]
 
 export default poems;
