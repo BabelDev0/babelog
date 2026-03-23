@@ -31,9 +31,13 @@ const poems = [
         title: "Silo",
         path: "/babelog/poems/silo",
     },
-        {
+    {
         title: "Fear in the wind",
         path: "/babelog/poems/fear-in-the-wind",
+    },
+    {
+        title: "Fruscìo",
+        path: "/babelog/poems/fruscio",
     },
 ]
 
