@@ -1,44 +1,50 @@
 ---
 import titleIcon from "@icons/title.svg";
+import "@fontsource/indie-flower/400.css";
 import { SimpleAnalytics } from "astro-simpleanalytics-plugin";
 
 interface Props {
   title: string;
+  description?: string;
+  lang?: string;
   backUrl?: string;
   footer?: boolean;
 }
 
-const { title, backUrl = "/babelog", footer = true } = Astro.props;
+const {
+  title,
+  description = "Babelog: paintings, poems and days by BabelDev0.",
+  lang = "en",
+  backUrl = "/babelog",
+  footer = true,
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/babelog/logo.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Gloria+Hallelujah&family=Indie+Flower&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/png" href="/babelog/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{title === "Babelog" ? title : `${title} | Babelog`}</title>
   </head>
   <body class="flex flex-col min-h-screen">
     <main class="flex-grow">
       <a href="/babelog">
         <div class="flex items-center justify-center mt-32 w-full">
-          <img class="w-40" src="/babelog/logo.svg" />
+          <img
+            class="w-40"
+            src="/babelog/logo.webp"
+            srcset="/babelog/logo.webp 1x, /babelog/logo@2x.webp 2x"
+            width="160"
+            height="140"
+            alt="Babelog logo"
+          />
         </div>
         <div class="flex items-center justify-center w-full">
-          <img class="w-80" src={titleIcon.src} />
+          <img class="w-80" src={titleIcon.src} alt="Babelog" />
         </div>
       </a>
       <slot />
@@ -69,5 +75,4 @@ const { title, backUrl = "/babelog", footer = true } = Astro.props;
     <SimpleAnalytics />
   </body>
 
-  <style is:global></style>
 </html>

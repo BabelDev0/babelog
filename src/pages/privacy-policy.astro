@@ -4,9 +4,9 @@
 import Layout from "src/layouts/Layout.astro";
 ---
 
-<Layout title="privacy-policy" footer={false}>
+<Layout title="Privacy Policy" footer={false}>
   <div class="flex flex-col items-center justify-center w-full mt-16">
-    <div class="w-1/2 space-y-5">
+    <div class="max-w-prose px-4 space-y-5">
       <div>
         <h1 class="text-2xl">Privacy Policy</h1>
         <p>
@@ -15,7 +15,7 @@ import Layout from "src/layouts/Layout.astro";
         </p>
       </div>
       <div>
-        <h1 class="text-2xl">What Data We Collect</h1>
+        <h2 class="text-2xl">What Data We Collect</h2>
         <p>
           We do not collect any personal data from our visitors. we use
           <a class="text-blue-400 font-bold" href="https://simpleanalytics.com/"
@@ -25,7 +25,7 @@ import Layout from "src/layouts/Layout.astro";
         </p>
       </div>
       <div>
-        <h1 class="text-2xl">Your Rights</h1>
+        <h2 class="text-2xl">Your Rights</h2>
         <p>
           Since we do not collect any personal data, there is no data to access
           or delete. However, if you have any questions or concerns about our
@@ -36,7 +36,7 @@ import Layout from "src/layouts/Layout.astro";
         </p>
       </div>
       <div class="flex justify-center pt-5">
-        <a href="https://www.simpleanalytics.com?utm_source=babeldev0.github.io&utm_content=badge" referrerpolicy="origin" target="_blank">
+        <a href="https://www.simpleanalytics.com?utm_source=babeldev0.github.io&utm_content=badge" referrerpolicy="origin" target="_blank" rel="noopener">
           <svg width="210" height="50" viewBox="0 0 210 50" role="img">
             <title>Simple Analytics: 100% privacy friendly</title>
             <style>

@@ -3,7 +3,8 @@ import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title="poem" backUrl="/babelog/poems">
+<Layout title={frontmatter.title}
+  lang={frontmatter.lang} backUrl="/babelog/poems">
   <div class="max-w-[65ch] w-full mx-auto px-4">
     <h1 class="text-6xl font-flower text-center my-16">{frontmatter.title}</h1>
 

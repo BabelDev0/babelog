@@ -4,9 +4,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				'caveat': ['Caveat'],
-				'flower' : ['Indie Flower'],
-				'gloria': ['Gloria Hallelujah'],
+				'flower': ['Indie Flower', 'cursive'],
 			},
 		},
 	},

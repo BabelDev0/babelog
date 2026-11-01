@@ -1,6 +1,7 @@
 ---
 title: Specchio della valle
 layout: ../../layouts/Poem.astro
+lang: it
 ---
 
 Specchio della valle

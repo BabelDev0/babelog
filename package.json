@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
-    "@astrojs/partytown": "^2.1.1",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/indie-flower": "^5.3.0",
     "astro": "^4.7.0",
     "astro-simpleanalytics-plugin": "^0.3.17",
     "tailwindcss": "^3.4.3",

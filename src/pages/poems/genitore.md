@@ -1,6 +1,7 @@
 ---
 title: Genitore
 layout: ../../layouts/Poem.astro
+lang: it
 ---
 
 Come può un albero,

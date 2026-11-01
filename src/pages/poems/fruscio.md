@@ -1,6 +1,7 @@
 ---
 title: Fruscìo
 layout: ../../layouts/Poem.astro
+lang: it
 ---
 
 dentro ho moltitudini

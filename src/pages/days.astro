@@ -3,11 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import days from "../data/daysData";
 
 const path = "/babelog/days/";
-
-const lastDay = days[days.length - 1];
 ---
 
-<Layout title="days">
+<Layout title="Days">
   <div class="flex flex-col items-center justify-center w-full mt-32">
     <div>
       <p class="text-2xl font-flower text-justify mx-4 lg:mx-28">
@@ -23,10 +21,6 @@ const lastDay = days[days.length - 1];
         out for now.
       </p>
     </div>
-
-    <a href={path + lastDay} class="text-5xl font-flower my-12">
-      <!-- <div class="border-black border-4 p-10">{lastDay}</div> -->
-    </a>
 
     <div
       class="grid

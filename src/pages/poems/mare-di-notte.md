@@ -1,6 +1,7 @@
 ---
 title: mare di notte
 layout: ../../layouts/Poem.astro
+lang: it
 ---
 
 Fauci d’inchiostro inchiodano i miei occhi

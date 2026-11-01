@@ -1,6 +1,7 @@
 ---
 title: Silo
 layout: ../../layouts/Poem.astro
+lang: it
 ---
 
 Come stai? 

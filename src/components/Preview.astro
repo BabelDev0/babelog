@@ -15,7 +15,7 @@ const { path, lazyLoad, title } = Astro.props;
         class="w-96 h-fit"
         src={path}
         loading={lazyLoad ? "lazy" : "eager"}
-        alt="preview drawing"
+        alt={title}
       />
     </a>
   </div>

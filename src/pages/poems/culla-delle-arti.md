@@ -1,6 +1,7 @@
 ---
 title: Culla delle arti
 layout: ../../layouts/Poem.astro
+lang: it
 ---
 
 Nella culla delle arti trovo il mio ristoro,

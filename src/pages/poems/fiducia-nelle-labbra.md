@@ -1,6 +1,7 @@
 ---
 title: Fiducia nelle labbra
 layout: ../../layouts/Poem.astro
+lang: it
 notes: |
   This poem is a reinterpretation inspired by Alda Merini’s Ci sono notti che non accadono mai. I allowed its atmosphere to guide me, not to replicate, but to explore a different cadence and unveil my own voice through it
 ---
