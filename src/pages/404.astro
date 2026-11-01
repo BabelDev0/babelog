@@ -3,12 +3,10 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Page not found" backUrl="/babelog/">
-  <div class="flex w-full justify-center items-center my-16">
-    <h1 class="text-6xl font-flower mx-10">404</h1>
-  </div>
-  <div class="flex flex-col justify-center items-center">
-    <div class="font-flower text-3xl">
-      <p>I must not have thought about this yet, I guess!</p>
-    </div>
+  <div class="mx-auto max-w-prose text-center font-flower">
+    <h1 class="mt-10 text-6xl sm:mt-16">404</h1>
+    <p class="mt-8 text-2xl sm:text-3xl">
+      I must not have thought about this yet, I guess!
+    </p>
   </div>
 </Layout>

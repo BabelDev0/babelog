@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import paintings from "../../data/paintingsData";
 
@@ -17,16 +18,24 @@ const currentpainting = paintings.find((o) => o.title === painting);
   title={currentpainting?.title ?? "painting"}
   backUrl="/babelog/paintings"
 >
-  <div class="flex flex-col items-center justify-center w-full mt-36">
-    <div class="border-4 border-black mx-1">
-      <img
-        class="sm:w-svh md:h-svh lg:h-svh"
-        src={currentpainting?.src}
-        alt={currentpainting?.title}
-      />
-    </div>
-    <h1 class="text-4xl font-flower font-bold mt-10">
-      {currentpainting?.title}
-    </h1>
-  </div>
+  {
+    currentpainting && (
+      <figure class="mt-10 flex flex-col items-center sm:mt-16">
+        <Image
+          class="h-auto max-h-[80svh] w-auto max-w-full border-4 border-black object-contain"
+          src={currentpainting.image}
+          widths={[480, 768, 1080, 1440]}
+          sizes="(min-width: 768px) 60vw, calc(100vw - 2rem)"
+          loading="eager"
+          fetchpriority="high"
+          alt={currentpainting.title}
+        />
+        <figcaption>
+          <h1 class="mt-6 text-center font-flower text-4xl font-bold">
+            {currentpainting.title}
+          </h1>
+        </figcaption>
+      </figure>
+    )
+  }
 </Layout>

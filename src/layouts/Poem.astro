@@ -3,20 +3,28 @@ import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={frontmatter.title}
-  lang={frontmatter.lang} backUrl="/babelog/poems">
-  <div class="max-w-[65ch] w-full mx-auto px-4">
-    <h1 class="text-6xl font-flower text-center my-16">{frontmatter.title}</h1>
+<Layout
+  title={frontmatter.title}
+  lang={frontmatter.lang}
+  backUrl="/babelog/poems"
+>
+  <article class="mx-auto w-full max-w-[65ch]">
+    <h1
+      class="mt-10 text-center font-flower text-5xl text-balance sm:mt-16 sm:text-6xl"
+    >
+      {frontmatter.title}
+    </h1>
 
-    <div class="font-flower text-2xl sm:text-3xl whitespace-pre-line text-left">
+    <div
+      class="mt-8 font-flower text-2xl leading-relaxed whitespace-pre-line sm:mt-12 sm:text-3xl"
+    >
       <slot />
     </div>
 
-    <!-- Optional Notes Section -->
     {
       frontmatter.notes && (
-        <div class="mt-12 text-xl text-gray-700 prose">{frontmatter.notes}</div>
+        <div class="mt-12 text-xl text-neutral-700">{frontmatter.notes}</div>
       )
     }
-  </div>
+  </article>
 </Layout>

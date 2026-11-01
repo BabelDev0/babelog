@@ -13,51 +13,51 @@ import Projections from "@paintings/Projections.webp";
 
 const paintings = [
   {
-    src: TISECAT.src,
+    image: TISECAT,
     title: "TISECAT",
   },
   {
-    src: NEWTREE.src,
+    image: NEWTREE,
     title: "NEWTREE",
   },
   {
-    src: light_v1.src,
+    image: light_v1,
     title: "Light V1",
   },
   {
-    src: Euler.src,
+    image: Euler,
     title: "Euler",
   },
   {
-    src: Godel.src,
+    image: Godel,
     title: "Godel",
   },
   {
-    src: DALWAVE.src,
+    image: DALWAVE,
     title: "DALWAVE",
   },
   {
-    src: GHOSSIAN.src,
+    image: GHOSSIAN,
     title: "GHOSSIAN",
   },
   {
-    src: light_v2.src,
+    image: light_v2,
     title: "Light V2",
   },
   {
-    src: Ivoryball.src,
+    image: Ivoryball,
     title: "Ivoryball",
   },
   {
-    src: Wind.src,
+    image: Wind,
     title: "Wind",
   },
   {
-    src: Quiraing.src,
+    image: Quiraing,
     title: "Quiraing",
   },
   {
-    src: Projections.src,
+    image: Projections,
     title: "Projections",
   },
 ];

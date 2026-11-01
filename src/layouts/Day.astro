@@ -4,12 +4,12 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title} backUrl="/babelog/days">
-  <div class="flex w-full justify-center items-center my-16">
-    <h1 class="text-5xl font-flower mx-10">{frontmatter.title}</h1>
-  </div>
-  <div class="flex flex-col justify-center items-center">
-    <div class="font-flower lg:text-3xl text-xl mx-3">
+  <article class="mx-auto max-w-prose">
+    <h1 class="mt-10 text-center font-flower text-4xl sm:mt-16 sm:text-5xl">
+      {frontmatter.title}
+    </h1>
+    <div class="mt-8 font-flower text-2xl leading-relaxed sm:mt-12 lg:text-3xl">
       <slot />
     </div>
-  </div>
+  </article>
 </Layout>

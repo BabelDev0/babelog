@@ -4,10 +4,11 @@ import HomeButton from "../components/HomeButton.astro";
 ---
 
 <Layout title="Babelog" backUrl="">
-  <div class="flex items-center justify-center w-full mt-20">
-    <div class="grid gap-y-3 lg:grid-cols-2 lg:gap-10">
-      <HomeButton label="Paintings" url="/babelog/paintings" />
-      <HomeButton label="Poems" url="/babelog/poems" />
-    </div>
-  </div>
+  <h1 class="sr-only">Babelog</h1>
+  <nav aria-label="Sections" class="mx-auto mt-12 max-w-xs sm:mt-16 sm:max-w-none">
+    <ul class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-10">
+      <li class="w-full sm:w-auto"><HomeButton label="Paintings" url="/babelog/paintings" /></li>
+      <li class="w-full sm:w-auto"><HomeButton label="Poems" url="/babelog/poems" /></li>
+    </ul>
+  </nav>
 </Layout>

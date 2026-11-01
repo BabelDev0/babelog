@@ -4,20 +4,19 @@ import poems from "../data/poemsData";
 ---
 
 <Layout title="Poems">
-  <div class="flex items-center justify-center w-full mt-36">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-      {
-        poems.map((poem) => (
-          <div>
-            <a
-              href={poem.path}
-              class="text-3xl font-flower border-4 border-black p-10 flex items-center justify-center hover:scale-105 transition duration-300"
-            >
-              {poem.title}
-            </a>
-          </div>
-        ))
-      }
-    </div>
-  </div>
+  <h1 class="sr-only">Poems</h1>
+  <ul class="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-5 sm:mt-16 sm:gap-8 lg:grid-cols-2">
+    {
+      poems.map((poem) => (
+        <li>
+          <a
+            href={poem.path}
+            class="flex min-h-24 items-center justify-center border-4 border-black p-6 text-center font-flower text-3xl transition duration-300 motion-safe:hover:scale-105 sm:p-10"
+          >
+            {poem.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>

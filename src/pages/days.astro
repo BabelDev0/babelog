@@ -6,9 +6,10 @@ const path = "/babelog/days/";
 ---
 
 <Layout title="Days">
-  <div class="flex flex-col items-center justify-center w-full mt-32">
-    <div>
-      <p class="text-2xl font-flower text-justify mx-4 lg:mx-28">
+  <div class="mx-auto mt-10 flex max-w-5xl flex-col items-center sm:mt-16">
+    <h1 class="sr-only">Days</h1>
+    <div class="max-w-prose">
+      <p class="font-flower text-xl leading-relaxed sm:text-2xl">
         This began as a 30-day consistency experiment, where I chose a phrase
         each day to reflect on and build my thoughts around. Some of the phrases
         include the word <u>God</u>, as I found passages from the Bible or other
@@ -22,24 +23,21 @@ const path = "/babelog/days/";
       </p>
     </div>
 
-    <div
-      class="grid
-        grid-cols-2
-        gap-y-2
-        gap-2
-        text-xl
-        lg:text-4xl
-        lg:grid-cols-5
-        lg:gap-10
-        lg:mx-4"
+    <ul
+      class="mt-10 grid w-full grid-cols-2 gap-3 text-xl sm:grid-cols-3 sm:gap-6 sm:text-2xl lg:grid-cols-5 lg:text-3xl"
     >
       {
         days.map((day) => (
-          <a href={path + day} class=" font-flower">
-            <div class="border-black border-2 p-10">{day}</div>
-          </a>
+          <li>
+            <a
+              href={path + day}
+              class="flex min-h-16 items-center justify-center border-2 border-black p-4 font-flower lg:p-8"
+            >
+              {day}
+            </a>
+          </li>
         ))
       }
-    </div>
+    </ul>
   </div>
 </Layout>

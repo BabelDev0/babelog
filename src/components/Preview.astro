@@ -1,23 +1,28 @@
 ---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
 export interface Props {
-  path: string;
+  image: ImageMetadata;
   lazyLoad: boolean;
   title: string;
 }
 
-const { path, lazyLoad, title } = Astro.props;
+const { image, lazyLoad, title } = Astro.props;
 ---
 
-<div class="flex flex-col justify-center items-center">
-  <div class="border-4 border-black hover:scale-105 transition duration-300">
-    <a href={`/babelog/paintings/${title}`}>
-      <img
-        class="w-96 h-fit"
-        src={path}
-        loading={lazyLoad ? "lazy" : "eager"}
-        alt={title}
-      />
-    </a>
-  </div>
-  <h1 class="text-2xl font-flower font-bold mt-3">{title}</h1>
-</div>
+<a
+  href={`/babelog/paintings/${title}`}
+  class="group flex flex-col items-center"
+>
+  <Image
+    class="h-auto w-full max-w-sm border-4 border-black transition duration-300 motion-safe:group-hover:scale-105"
+    src={image}
+    widths={[320, 480, 640, 768]}
+    sizes="(min-width: 1024px) 384px, (min-width: 640px) 45vw, calc(100vw - 2rem)"
+    loading={lazyLoad ? "lazy" : "eager"}
+    fetchpriority={lazyLoad ? "auto" : "high"}
+    alt={title}
+  />
+  <h2 class="mt-3 font-flower text-2xl font-bold">{title}</h2>
+</a>

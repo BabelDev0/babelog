@@ -24,50 +24,67 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="icon" type="image/png" href="/babelog/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title === "Babelog" ? title : `${title} | Babelog`}</title>
   </head>
-  <body class="flex flex-col min-h-screen">
-    <main class="flex-grow">
-      <a href="/babelog">
-        <div class="flex items-center justify-center mt-32 w-full">
-          <img
-            class="w-40"
-            src="/babelog/logo.webp"
-            srcset="/babelog/logo.webp 1x, /babelog/logo@2x.webp 2x"
-            width="160"
-            height="140"
-            alt="Babelog logo"
-          />
-        </div>
-        <div class="flex items-center justify-center w-full">
-          <img class="w-80" src={titleIcon.src} alt="Babelog" />
-        </div>
+  <body class="flex min-h-svh flex-col bg-white text-black antialiased">
+    <a
+      href="#content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-black focus:px-4 focus:py-3 focus:text-white"
+    >
+      Skip to content
+    </a>
+    <header class="px-4 pt-8 sm:pt-16 lg:pt-24">
+      <a
+        href="/babelog"
+        class="mx-auto flex w-fit flex-col items-center"
+        aria-label="Babelog home"
+      >
+        <img
+          class="h-auto w-24 sm:w-32 lg:w-40"
+          src="/babelog/logo.webp"
+          srcset="/babelog/logo.webp 1x, /babelog/logo@2x.webp 2x"
+          width="160"
+          height="140"
+          alt=""
+        />
+        <img
+          class="h-auto w-52 sm:w-64 lg:w-80"
+          src={titleIcon.src}
+          width={titleIcon.width}
+          height={titleIcon.height}
+          alt=""
+        />
       </a>
+    </header>
+    <main id="content" class="w-full flex-grow px-4 pb-8 sm:px-6">
       <slot />
       {
         backUrl && (
-          <a href={backUrl} class="flex items-center justify-center mt-16">
-            <h1 class="text-4xl">🔙</h1>
+          <a
+            href={backUrl}
+            class="mx-auto mt-12 flex min-h-12 w-fit items-center gap-2 px-4 font-flower text-2xl underline-offset-4 hover:underline sm:mt-16"
+          >
+            <span aria-hidden="true">←</span> Back
           </a>
         )
       }
     </main>
-    <!-- Footer section -->
     {
       footer && (
-        <footer class="text-sm mx-10 mt-20 mb-3">
-          <div class="flex justify-center items-center">
-            <p class="mr-1">
-              We use analytics to gather data about how our website is used.{" "}
-              <a class="text-blue-400 font-bold" href="/babelog/privacy-policy">
-                Privacy Policy
-              </a>
-              .
-            </p>
-          </div>
+        <footer class="px-6 pt-8 pb-[max(1rem,env(safe-area-inset-bottom))] text-center text-sm text-neutral-700">
+          <p>
+            We use analytics to gather data about how our website is used.{" "}
+            <a
+              class="inline-block py-3 font-bold text-blue-700 underline-offset-2 hover:underline"
+              href="/babelog/privacy-policy"
+            >
+              Privacy Policy
+            </a>
+          </p>
         </footer>
       )
     }
