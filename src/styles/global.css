@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "@fontsource/indie-flower/400.css";
+
+@theme {
+  --font-flower: "Indie Flower", cursive;
+}

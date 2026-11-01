@@ -1,7 +1,6 @@
 ---
 import titleIcon from "@icons/title.svg";
-import "@fontsource/indie-flower/400.css";
-import { SimpleAnalytics } from "astro-simpleanalytics-plugin";
+import "../styles/global.css";
 
 interface Props {
   title: string;
@@ -62,7 +61,7 @@ const {
         <footer class="text-sm mx-10 mt-20 mb-3">
           <div class="flex justify-center items-center">
             <p class="mr-1">
-              We use analytics to gather data about how our website is used.
+              We use analytics to gather data about how our website is used.{" "}
               <a class="text-blue-400 font-bold" href="/babelog/privacy-policy">
                 Privacy Policy
               </a>
@@ -72,7 +71,24 @@ const {
         </footer>
       )
     }
-    <SimpleAnalytics />
+    {
+      import.meta.env.PROD && (
+        <>
+          <script
+            is:inline
+            async
+            src="https://scripts.simpleanalyticscdn.com/latest.js"
+          />
+          <noscript>
+            <img
+              src="https://queue.simpleanalyticscdn.com/noscript.gif"
+              alt=""
+              referrerpolicy="no-referrer-when-downgrade"
+            />
+          </noscript>
+        </>
+      )
+    }
   </body>
 
 </html>
